@@ -36,30 +36,31 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ertertetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.ertertetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -118,6 +119,12 @@
             this.testToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.testToolStripMenuItem.Text = "test";
             // 
+            // ertertetToolStripMenuItem
+            // 
+            this.ertertetToolStripMenuItem.Name = "ertertetToolStripMenuItem";
+            this.ertertetToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.ertertetToolStripMenuItem.Text = "ertertet";
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -137,18 +144,13 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
             // 
-            // ertertetToolStripMenuItem
-            // 
-            this.ertertetToolStripMenuItem.Name = "ertertetToolStripMenuItem";
-            this.ertertetToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.ertertetToolStripMenuItem.Text = "ertertet";
-            // 
             // toolStripContainer1
             // 
             // 
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.ContextMenuStrip = this.contextMenuStrip1;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.button1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.statusStrip1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.textBox2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.textBox1);
@@ -163,6 +165,69 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 48);
+            this.contextMenuStrip1.Text = "Копировать";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem1.Text = "Копировать";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem2.Text = "Вставить";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 524);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.statusStrip1.Size = new System.Drawing.Size(1198, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(72, 17);
+            this.toolStripStatusLabel1.Text = "Вот оно что";
+            // 
+            // toolStripProgressBar2
+            // 
+            this.toolStripProgressBar2.Name = "toolStripProgressBar2";
+            this.toolStripProgressBar2.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar2.Value = 50;
+            // 
+            // textBox2
+            // 
+            this.textBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.textBox2.Location = new System.Drawing.Point(755, 241);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.textBox1.Location = new System.Drawing.Point(347, 229);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // toolStrip2
             // 
@@ -200,68 +265,14 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
-            // contextMenuStrip1
+            // button1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 48);
-            this.contextMenuStrip1.Text = "Копировать";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem1.Text = "Копировать";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem2.Text = "Вставить";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox1.Location = new System.Drawing.Point(347, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox2.Location = new System.Drawing.Point(755, 241);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 524);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(1198, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(72, 17);
-            this.toolStripStatusLabel1.Text = "Вот оно что";
-            // 
-            // toolStripProgressBar2
-            // 
-            this.toolStripProgressBar2.Name = "toolStripProgressBar2";
-            this.toolStripProgressBar2.Size = new System.Drawing.Size(100, 16);
-            this.toolStripProgressBar2.Value = 50;
+            this.button1.Location = new System.Drawing.Point(114, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -280,11 +291,11 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,6 +326,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
